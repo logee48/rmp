@@ -21,9 +21,7 @@ app.listen(PORT, () => {
 
 app.use(
   cors({
-    origin: ["https://rmp-test.onrender.com"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
+    origin: ["https://rmp-test.onrender.com"]
   })
 );
 app.use(cookieParser());
