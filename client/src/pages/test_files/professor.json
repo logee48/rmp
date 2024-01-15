@@ -1,0 +1,30 @@
+[
+    {
+        "uid":"1001",
+        "name":"raj-abc",
+        "college":"abc",
+        "dept":"cse",
+        "desig":"ass professor"
+    },
+    {
+        "uid":"1002",
+        "name":"ram-abc",
+        "college":"abc",
+        "dept":"ece",
+        "desig":"deen"
+    },
+    {
+        "uid":"1003",
+        "name":"ram-def",
+        "college":"def",
+        "dept":"ece",
+        "desig":"deen"
+    },
+    {
+        "uid":"1004",
+        "name":"raj-def",
+        "college":"def",
+        "dept":"cse",
+        "desig":"ass professor"
+    }
+]
