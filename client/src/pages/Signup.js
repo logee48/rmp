@@ -32,7 +32,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://rmp-test.onrender.com//signup",
+        "https://rmp-test.onrender.com/signup",
         {
           ...inputValue,
         },
