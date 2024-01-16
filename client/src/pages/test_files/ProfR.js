@@ -19,7 +19,7 @@ const ProfR=()=>{
     const wat = async () => {
         //this data to fetch logged in users name
         const { data } = await axios.post(
-            "https://rmp-test.onrender.com/",
+            "https://rmp-test.onrender.com",
             {},
             { withCredentials: true }
           );

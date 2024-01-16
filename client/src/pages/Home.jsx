@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
@@ -14,7 +14,9 @@ const Home = () => {
         navigate("/login");
       }
       const { data } = await axios.post(
-        "https://rmp-test.onrender.com/"
+        "https://rmp-test.onrender.com",
+        {},
+        { withCredentials: true }
       );
       const { status, user } = data;
       setUsername(user);
@@ -36,7 +38,6 @@ const Home = () => {
         <h4>
           {" "}
           Welcome <span>{username}</span>
-          <Link to={"/college"}>to college</Link>
         </h4>
         <button onClick={Logout}>LOGOUT</button>
       </div>
