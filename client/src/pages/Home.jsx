@@ -14,7 +14,7 @@ const Home = () => {
         navigate("/login");
       }
       const { data } = await axios.post(
-        "https://rmp-test.onrender.com",
+        "rmp-test.onrender.com",
         {},
         { withCredentials: true }
       );

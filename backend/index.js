@@ -21,7 +21,7 @@ app.listen(PORT, () => {
 
 app.use(
   cors({
-    origin: ["https://rmp-test-frontend.onrender.com"],
+    origin: ["rmp-test-frontend.onrender.com"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
