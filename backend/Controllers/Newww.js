@@ -13,7 +13,7 @@ module.exports.Apple = async (req, res, next) => {
       const wat = await NewDataa.create({ neww, createdAt });
       //using mongodb unique id
     //   const token = createSecretToken(user._id);
-    //   res.cookie("token", token, {
+    //   res.cookie("apple", token, {
     //     withCredentials: true,
     //     httpOnly: false,
     //   });

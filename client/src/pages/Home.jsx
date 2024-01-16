@@ -24,12 +24,12 @@ const Home = () => {
         ? toast(`Hello ${user}`, {
             position: "top-right",
           })
-        : (removeCookie("token"), navigate("/login"));
+        : (removeCookie("apple"), navigate("/login"));
     };
     verifyCookie();
   }, [cookies, navigate, removeCookie]);
   const Logout = () => {
-    removeCookie("token");
+    removeCookie("apple");
     navigate("/signup");
   };
   return (

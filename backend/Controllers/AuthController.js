@@ -16,7 +16,7 @@ module.exports.Signup = async (req, res, next) => {
     const user = await User.create({ email, password, username, createdAt });
     //using mongodb unique id
     const token = createSecretToken(user._id);
-    res.cookie("token", token, {
+    res.cookie("apple", token, {
       withCredentials: true,
       httpOnly: false,
     });
@@ -47,7 +47,7 @@ module.exports.Login = async (req, res, next) => {
       }
       //creating session for login
        const token = createSecretToken(user._id);
-       res.cookie("token", token, {
+       res.cookie("apple", token, {
          withCredentials: true,
          httpOnly: false,
        });
