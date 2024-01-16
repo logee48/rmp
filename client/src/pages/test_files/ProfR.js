@@ -19,7 +19,7 @@ const ProfR=()=>{
     const wat = async () => {
         //this data to fetch logged in users name
         const { data } = await axios.post(
-            "rmp-test.onrender.com",
+            "https://rmp-test.onrender.com",
             {},
             { withCredentials: true }
           );
@@ -39,7 +39,7 @@ const ProfR=()=>{
         }
 
         if(status){
-            axios.post(`rmp-test.onrender.com/test1`,a)
+            axios.post(`https://rmp-test.onrender.com/test1`,a)
                     .then((response) => console.log(response));
         }
         else{
@@ -50,7 +50,7 @@ const ProfR=()=>{
     }
     // const fetch_data = async()=>{
     //     //fetch prof review data
-    //     await axios.get('rmp-test.onrender.com/fetch')
+    //     await axios.get('https://rmp-test.onrender.com/fetch')
     //     .then(response => {
     //         // Handle response
     //         setRdata(response.data.data);
@@ -62,7 +62,7 @@ const ProfR=()=>{
     //     });
     // }
     // const fetch_test = async()=>{
-    //     const data = await axios.get("rmp-test.onrender.com/fetch");
+    //     const data = await axios.get("https://rmp-test.onrender.com/fetch");
     //     // console.log(data.data.data);
     //     setRdata(data.data.data)
     // }
@@ -103,7 +103,7 @@ const ProfR=()=>{
         fetch_url()
         // fetch_test()
         const test_test=async()=>{
-            const data = await axios.get("rmp-test.onrender.com/fetch");
+            const data = await axios.get("https://rmp-test.onrender.com/fetch");
             // console.log(data.data.data);
             var aa = data.data.data;
             // console.log(aa);

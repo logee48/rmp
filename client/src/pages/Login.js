@@ -31,7 +31,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "rmp-test.onrender.com/login",
+        "https://rmp-test.onrender.com/login",
         {
           ...inputValue,
         },

@@ -6,7 +6,7 @@ const Test=()=>{
     const wat = async () => {
         //this data to fetch logged in users name
         const { data } = await axios.post(
-            "rmp-test.onrender.com",
+            "https://rmp-test.onrender.com",
             {},
             { withCredentials: true }
           );
@@ -16,7 +16,7 @@ const Test=()=>{
         const a = {
             neww:user
         }
-        axios.post(`rmp-test.onrender.com/test`,a)
+        axios.post(`https://rmp-test.onrender.com/test`,a)
                 .then((response) => console.log(response));;
     }
     
