@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
@@ -36,6 +36,7 @@ const Home = () => {
         <h4>
           {" "}
           Welcome <span>{username}</span>
+          <Link to={"/college"}>to college</Link>
         </h4>
         <button onClick={Logout}>LOGOUT</button>
       </div>
