@@ -21,7 +21,8 @@ app.listen(PORT, () => {
 
 app.use(
   cors({
-    origin: "https://rmp-test.onrender.com"
+    origin: ["https://rmp-test-frontend.onrender.com/"],
+    methods: ["GET", "POST", "PUT", "DELETE"]
   })
 );
 app.use(cors());
@@ -33,7 +34,6 @@ var allowCrossDomain = function(req,res,next) {
   next();  
 }
 app.use(allowCrossDomain);
-
 app.use(cookieParser());
 
 app.use(express.json());

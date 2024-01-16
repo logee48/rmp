@@ -34,10 +34,9 @@ const Login = () => {
         "https://rmp-test.onrender.com/login",
         {
           ...inputValue,
-        },
-        { withCredentials: true }
+        }
       );
-      console.log(data);
+      // console.log(data);
       const { success, message } = data;
       if (success) {
         handleSuccess(message);
@@ -48,7 +47,7 @@ const Login = () => {
         handleError(message);
       }
     } catch (error) {
-      console.log(error);
+      //
     }
     setInputValue({
       ...inputValue,
