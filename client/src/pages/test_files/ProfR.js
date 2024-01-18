@@ -106,7 +106,7 @@ const ProfR=()=>{
             const data = await axios.get("https://rmp-test.onrender.com/fetch");
             // console.log(data.data.data);
             var aa = data.data.data;
-            // console.log(aa);
+            console.log(aa);
 
 
             
