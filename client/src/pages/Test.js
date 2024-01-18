@@ -6,7 +6,7 @@ const Test=()=>{
         const a = {
             neww:"user"
         }
-        axios.post(`https://rmp-test.onrender.com//test`,a)
+        axios.post(`https://rmp-test.onrender.com/test`,a)
                 .then((response) => console.log(response));;
                 
     }
