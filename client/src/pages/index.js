@@ -1,6 +1,3 @@
-export {default as Home} from './Home'
-export {default as Login} from './Login'
-export {default as Signup} from './Signup'
 export {default as Test} from './Test'
 export {default as College} from './test_files/College'
 export {default as Prof} from './test_files/Prof'

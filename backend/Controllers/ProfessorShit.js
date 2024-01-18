@@ -1,4 +1,3 @@
-// const NewDataa = require("../Models/P")
 const Prof = require("../Models/ProfessorModel")
 
 module.exports.Prof_test = async (req, res, next) => {

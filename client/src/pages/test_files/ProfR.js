@@ -18,19 +18,19 @@ const ProfR=()=>{
 
     const wat = async () => {
         //this data to fetch logged in users name
-        const { data } = await axios.post(
-            "https://rmp-test.onrender.com",
-            {},
-            { withCredentials: true }
-          );
-          const { status, user, email } = data;
-          console.log(status);
-          console.log(user);
+        // const { data } = await axios.post(
+        //     "https://rmp-test.onrender.com/",
+        //     {},
+        //     { withCredentials: true }
+        //   );
+        //   const { status, user, email } = data;
+        //   console.log(status);
+        //   console.log(user);
           const a = {
-            username:user,
+            username:"joemama",
             prof_id:Cname,
             comment:P_comment,
-            email:email,
+            email:"demo@gmail.com",
             overall_rating:(((parseInt(R1)+parseInt(R2)+parseInt(R3))/3)/10)*5,
             review_1:R1,
             review_2:R2,
@@ -38,8 +38,8 @@ const ProfR=()=>{
             like:like
         }
 
-        if(status){
-            axios.post(`https://rmp-test.onrender.com/test1`,a)
+        if(true){
+            axios.post(`https://rmp-test.onrender.com//test1`,a)
                     .then((response) => console.log(response));
         }
         else{
@@ -50,7 +50,7 @@ const ProfR=()=>{
     }
     // const fetch_data = async()=>{
     //     //fetch prof review data
-    //     await axios.get('https://rmp-test.onrender.com/fetch')
+    //     await axios.get('https://rmp-test.onrender.com//fetch')
     //     .then(response => {
     //         // Handle response
     //         setRdata(response.data.data);
@@ -62,7 +62,7 @@ const ProfR=()=>{
     //     });
     // }
     // const fetch_test = async()=>{
-    //     const data = await axios.get("https://rmp-test.onrender.com/fetch");
+    //     const data = await axios.get("https://rmp-test.onrender.com//fetch");
     //     // console.log(data.data.data);
     //     setRdata(data.data.data)
     // }
@@ -103,7 +103,7 @@ const ProfR=()=>{
         fetch_url()
         // fetch_test()
         const test_test=async()=>{
-            const data = await axios.get("https://rmp-test.onrender.com/fetch");
+            const data = await axios.get("https://rmp-test.onrender.com//fetch");
             // console.log(data.data.data);
             var aa = data.data.data;
             // console.log(aa);
