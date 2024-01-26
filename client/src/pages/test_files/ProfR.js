@@ -76,12 +76,12 @@ const ProfR=()=>{
           )
       });
 
-    let prof_comm_filter = Rdata.filter(item =>{
-    return Object.keys(item).some(key=>
-        (item.prof_id).includes(Cname)
-        )
-    });
-    console.log(prof_comm_filter);
+    // let prof_comm_filter = Rdata.filter(item =>{
+    // return Object.keys(item).some(key=>
+    //     (item.prof_id).includes(Cname)
+    //     )
+    // });
+    // console.log(prof_comm_filter);
 
     const fetch_url=()=>{
         const queryParameters = new URLSearchParams(window.location.search)
@@ -106,21 +106,28 @@ const ProfR=()=>{
             const data = await axios.get("https://rmp-test.onrender.com/fetch");
             // console.log(data.data.data);
             var aa = data.data.data;
-            console.log(aa);
+            console.log(aa);    
 
+            const queryParameters = new URLSearchParams(window.location.search)
+            const namee = queryParameters.get("pname")
+            let prof_comm_filter = aa.filter(item =>{
+                return Object.keys(item).some(key=>
+                    (item.prof_id).includes(namee)
+                    )
+                });
 
             
-            setRdata(aa)
+            setRdata(prof_comm_filter)
             var count = 0;
             var R_count = 0;
-            for(let i=0;i<aa.length;i++)
+            for(let i=0;i<prof_comm_filter.length;i++)
             {
-                count+=aa[i].like;
-                R_count+=aa[i].overall_rating;
+                count+=prof_comm_filter[i].like;
+                R_count+=prof_comm_filter[i].overall_rating;
 
             }
-            setO_rate(R_count/aa.length)
-            setDlike(count-1)
+            setO_rate(R_count/prof_comm_filter.length)
+            setDlike(count)
 
             //filter shit for comment prof_id
             // console.log(count);
@@ -148,7 +155,7 @@ const ProfR=()=>{
             <div>R-view number :{(Rdata).length}</div>
             <div>No of likes: {Dlike}</div>
             {/* <div>{like_count}</div> */}
-            {prof_comm_filter.map((prop,i)=>{
+            {Rdata.map((prop,i)=>{
                 // var a = 0;
                 // console.log();
                   return(
